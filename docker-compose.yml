@@ -1,0 +1,27 @@
+services:
+  backend:
+    build: .
+    ports:
+      - "4000:4000"
+    env_file:
+      - .env
+    volumes:
+      - ./music:/app/music
+      - ./public:/app/public
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    ports:
+      - "5432:5432"
+
+volumes:
+  db_data:
