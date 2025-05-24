@@ -1,3 +1,5 @@
+CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+
 CREATE TABLE playlists (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   title TEXT UNIQUE NOT NULL,

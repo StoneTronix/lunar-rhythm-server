@@ -1,8 +1,9 @@
 const express = require('express');
 const fs = require('fs')
 const pool = require('../db');
-const router = express.Router();
 const path = require('path');
+
+const router = express.Router();
 
 const MUSIC_DIR = path.join(__dirname, '../music');
 
