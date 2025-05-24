@@ -15,6 +15,6 @@ app.use('/playlists', playlistsRouter);
 app.use('/tracks', tracksRouter);
 
 app.listen(PORT, () => {
-  console.log(`Сервер запущен: http://localhost:${PORT}`);
+  console.log(`Сервер запущен: http://0.0.0.0:${PORT}`);
   syncTracksWithFiles();
 });
