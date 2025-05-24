@@ -6,8 +6,7 @@ const pool = new Pool({
   host: process.env.DB_HOST,
   database: process.env.DB_NAME,
   password: process.env.DB_PASSWORD,
-  port: parseInt(process.env.DB_PORT),  
-  // ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false // 4. Для прода
+  port: parseInt(process.env.DB_PORT),
 });
 
 // Проверка подключения при старте
