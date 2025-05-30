@@ -11,7 +11,7 @@ const pool = new Pool({
 
 // Проверка подключения при старте
 pool.query('SELECT NOW()')
-  .then(() => console.log('✅ PostgreSQL connected'))
-  .catch(err => console.error('❌ PostgreSQL connection error', err.stack));
+  .then(() => console.log('✅ PostgreSQL подключена'))
+  .catch(err => console.error('❌ Ошибка подключения к PostgreSQL', err.stack));
 
 module.exports = pool;

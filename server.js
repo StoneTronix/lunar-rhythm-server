@@ -38,6 +38,6 @@ app.listen(PORT, async () => {
     await syncTracksWithFiles();
   } catch (err) {
     console.error('Ошибка при подключении к базе:', err);
-    process.exit(1); // аварийный выход, чтобы контейнер можно было перезапустить
+    process.exit(1);
   }
 });
